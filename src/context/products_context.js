@@ -27,12 +27,8 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE });
   };
 
-  useEffect(() => {
-    openSidebar(url);
-  }, []);
-
   return (
-    <ProductsContext.Provider value='products context'>
+    <ProductsContext.Provider value={{ ...state, openSidebar, closeSidebar }}>
       {children}
     </ProductsContext.Provider>
   );
