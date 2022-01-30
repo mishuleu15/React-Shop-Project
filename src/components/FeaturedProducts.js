@@ -7,8 +7,6 @@ import Loading from './Loading';
 import Product from './Product';
 
 const FeaturedProducts = () => {
-  console.log(useProductsContext());
-
   const {
     products_loading: loading,
     products_error: error,
